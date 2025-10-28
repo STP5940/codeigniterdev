@@ -1,0 +1,14 @@
+ล้างแคช composer ก่อนติดตั้งโปรเจค
+composer clear-cache
+
+composer create-project "codeigniter4/appstarter:4.4.8" .
+composer require codeigniter4/framework:4.4.8
+
+cp env .env
+
+ถ้าไม่ใช้ 8080 debug ของ codeigniter จะไม่ขึ้น
+php spark serve --host localhost --port 8080
+
+CodeIgniter มีระบบ cache
+php spark cache:clear
+และลบไฟล์ในโฟลเดอร์ writable/cache/ ด้วยมือ
